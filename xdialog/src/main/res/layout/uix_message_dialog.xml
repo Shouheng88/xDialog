@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:minHeight="87dp"
+    android:minWidth="104dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="26dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        tools:src="#ccc"
+        android:layout_marginBottom="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_marginBottom="8dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"/>
+
+    <me.shouheng.uix.widget.text.NormalTextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="208dp"
+        android:layout_gravity="center_horizontal"
+        tools:text="阿斯顿大的"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:includeFontPadding="false"
+        android:textColor="#ffffff"
+        android:visibility="visible"/>
+
+</LinearLayout>

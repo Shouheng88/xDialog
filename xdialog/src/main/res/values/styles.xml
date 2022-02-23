@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BeautyDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+    <style name="BeautyDialogWrap" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="BeautyDialogHalf" parent="BeautyDialog">
+        <item name="android:windowMinWidthMajor">50%</item>
+        <item name="android:windowMinWidthMinor">50%</item>
+    </style>
+    <style name="BeautyDialogTwoThird" parent="BeautyDialog">
+        <item name="android:windowMinWidthMajor">66%</item>
+        <item name="android:windowMinWidthMinor">66%</item>
+    </style>
+
+    <style name="DialogTopAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/uix_dialog_translate_enter_top</item>
+        <item name="android:windowExitAnimation">@anim/uix_dialog_translate_exit_top</item>
+    </style>
+    <style name="DialogCenterAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/uix_dialog_translate_alpha_enter</item>
+        <item name="android:windowExitAnimation">@anim/uix_dialog_translate_alpha_exit</item>
+    </style>
+    <style name="DialogBottomAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/uix_dialog_translate_enter</item>
+        <item name="android:windowExitAnimation">@anim/uix_dialog_translate_exit</item>
+    </style>
+
+    <style name="DialogAlphaAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/uix_dialog_alpha_enter</item>
+        <item name="android:windowExitAnimation">@anim/uix_dialog_alpha_exit</item>
+    </style>
+
+    <style name="Dialog"/>
+    <style name="Dialog.Loading">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="Dialog.Loading.Cancelable" parent="Dialog.Loading">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Dialog.Bottom"/>
+    <style name="Dialog.Bottom.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

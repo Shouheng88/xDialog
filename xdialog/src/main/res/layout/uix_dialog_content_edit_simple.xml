@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <me.shouheng.uix.widget.text.ClearEditText
+        android:id="@+id/et"
+        tools:hint="12313123123"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/v"
+        android:background="?attr/colorAccent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        tools:background="@android:color/holo_red_dark"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_gravity="end"
+        tools:text="12/12"
+        android:layout_marginEnd="8dp"
+        android:textColor="?attr/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

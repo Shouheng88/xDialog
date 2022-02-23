@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:layout_height="40dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/uix_address_pick_result"
+            style="@style/Dialog.City"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_province"
+            tools:text="/province"
+            android:textColor="?attr/colorAccent"
+            style="@style/Dialog.City"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_city"
+            tools:text="/province"
+            android:textColor="?attr/colorAccent"
+            style="@style/Dialog.City"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_area"
+            tools:text="/province"
+            android:textColor="?attr/colorAccent"
+            style="@style/Dialog.City"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_province"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_city"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_area"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</LinearLayout>

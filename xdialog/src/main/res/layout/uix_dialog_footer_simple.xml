@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View android:layout_width="match_parent"
+        android:id="@+id/h"
+        tools:background="@android:color/darker_gray"
+        android:layout_height="1px"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <me.shouheng.uix.widget.text.NormalTextView
+            android:id="@+id/tv_left"
+            tools:text="Left"
+            style="@style/Dialog.Bottom.Button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <View android:layout_width="1px"
+            android:id="@+id/v1"
+            tools:background="@android:color/darker_gray"
+            android:layout_height="match_parent"/>
+
+        <me.shouheng.uix.widget.text.NormalTextView
+            android:id="@+id/tv_middle"
+            tools:text="Middle Middle Middle Middle Middle"
+            style="@style/Dialog.Bottom.Button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+        <View android:layout_width="1px"
+            android:id="@+id/v2"
+            tools:background="@android:color/darker_gray"
+            android:layout_height="match_parent"/>
+
+        <me.shouheng.uix.widget.text.NormalTextView
+            android:id="@+id/tv_right"
+            tools:text="Right"
+            style="@style/Dialog.Bottom.Button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

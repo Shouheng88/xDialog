@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 正则表达式编辑框 -->
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+    <declare-styleable name="RegexEditText">
+        <!-- 正则输入限制 -->
+        <attr name="inputRegex" format="string" />
+        <!-- 常用正则类型 -->
+        <attr name="regexType" >
+            <!-- 手机号（只能以 1 开头） -->
+            <enum name="mobile" value="0x01" />
+            <!-- 中文（普通的中文字符） -->
+            <enum name="chinese" value="0x02" />
+            <!-- 英文（大写和小写的英文） -->
+            <enum name="english" value="0x03" />
+            <!-- 整数（非 0 开头的数字） -->
+            <enum name="count" value="0x04" />
+            <!-- 用户名（中文、英文、数字） -->
+            <enum name="name" value="0x05" />
+            <!-- 非空格字符 -->
+            <enum name="nonnull" value="0x06" />
+        </attr>
+    </declare-styleable>
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- 带有清除按钮的编辑框 -->
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+    <declare-styleable name="ClearEditText">
+        <attr name="clear_image_tint_color" format="color"/>
+    </declare-styleable>
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- 列表为空的控件 -->
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+    <declare-styleable name="EmptyView">
+        <attr name="empty_loading_style">
+            <enum name="android" value="0"/>
+            <enum name="ios" value="1"/>
+        </attr>
+        <attr name="empty_state">
+            <enum name="loading" value="0"/>
+            <enum name="empty" value="1"/>
+        </attr>
+        <attr name="empty_image" format="reference"/>
+        <attr name="empty_image_size" format="dimension"/>
+        <attr name="empty_title" format="string"/>
+        <attr name="empty_title_text_color" format="color"/>
+        <attr name="empty_detail" format="string"/>
+        <attr name="empty_detail_text_color" format="color"/>
+        <attr name="empty_loading_tips" format="string"/>
+        <attr name="empty_loading_tips_text_color" format="color"/>
+    </declare-styleable>
+    <!--////////////////////////////////////////////////////////////////////////////////////////-->
+
+</resources>
