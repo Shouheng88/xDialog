@@ -1,6 +1,29 @@
+```
+================================================================================================
+                    88888888ba,    88              88                            
+                    88      `"8b   ""              88                            
+                    88        `8b                  88                            
+       8b,     ,d8  88         88  88  ,adPPYYba,  88   ,adPPYba,    ,adPPYb,d8  
+        `Y8, ,8P'   88         88  88  ""     `Y8  88  a8"     "8a  a8"    `Y88  
+          )888(     88         8P  88  ,adPPPPP88  88  8b       d8  8b       88  
+        ,d8" "8b,   88      .a8P   88  88,    ,88  88  "8a,   ,a8"  "8a,   ,d88  
+       8P'     `Y8  88888888Y"'    88  `"8bbdP"Y8  88   `"YbbdP"'    `"YbbdP"Y8  
+                                                                    aa,    ,88  
+                                                                     "Y8bbdP"   
+================================================================================================
+```
+
 # 优雅的 Android 对话框类库封装 xDialog
 
 对 Android 开发而言，对话框是打交道比较频繁的 UI 控件之一。对话框对大部分程序员而言并不陌生。然而，当考虑到复杂的交互效果、组件复用、自定义和各种 UI 风格的时候，事情变得麻烦了起来。xDialog 就是我设计的用来整合以上多种情况的 UI 组件。相比于大部分开源库，它可自定义程度更高，能满足更多的应用场景。
+
+<div style="display:flex;" id="target">
+<img src="resources/Screenshot_2022-02-24-23-16-15-05_08de23611bf79886a74beffca0ad6bab.jpg" width="19%" />
+<img src="resources/Screenshot_2022-02-24-23-16-16-85_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="19%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-19-28_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="19%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-21-50_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="19%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-25-65_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="19%"/>
+</div>
 
 ## 1、整体设计
 
@@ -57,6 +80,10 @@ inline fun createDialog(
 
 如上代码所示，用户只需要将通过实现三个接口实现自己的各个部分，然后就可以做到指定的位置的 UI 的替换。
 
+<div style="display:flex;" id="target">
+<img src="resources/animation.gif" style="margin-left:5px;" width="19%"/>
+</div>
+
 ## 2、兼容平板、手机和横屏
 
 基于上述设计思路，我为构建者增加了几个参数用来满足在不同分辨率上使用的场景的需求。该库内置了四种不同大小的对话框，对于用户，只需要判断上述不同的情景之后根据情况传入指定的样式即可。然后在对话框内部会使用不同的 style 作为对话框的主题，
@@ -79,6 +106,10 @@ val dialog = if (bottomSheet) {
 
 谷歌提供的 Material 库中提供了叫做 BottomSheetDialog 的对话框。相比于普通的对话框，这个类可以提供更好的交互效果。比如，比如自己的地图中就有类似的交互效果。底部弹出一部分，然后向上可以继续拖拽并展示全部内容。这种交互方式在许多情景下会非常有用，特别是，当我们需要提供的内容可能在普通的对话框装不下的情况而又不希望切换一个新的页面的时候。较少的切换页面，降低操作的层级，可以提供更好的用户交互体验。
 
+<div style="display:flex;" id="target">
+<img src="resources/animation0.gif" style="margin-left:5px;" width="19%"/>
+</div>
+
 在 xDialog 中，我增加了几个参数来支持这种应用场景，
 
 ```kotlin
@@ -99,11 +130,24 @@ val dialog = if (bottomSheet) {
 
 xDialog 为背景模糊效果提供了封装。为此 xDialog 提供了 BlurEngine 用来在 Dialog 显示的时候截取屏幕进行模糊并展示到对话框背部。用户启用的方式也非常简单，只需要传入一个参数就可以直接使用背景模糊的效果。
 
-## 5、提供了默认的封装和多种是用 API
+<div style="display:flex;" id="target">
+<img src="resources/Screenshot_2022-02-24-23-16-19-28_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="19%"/>
+</div>
+
+## 5、提供了默认的封装和多种实用 API
 
 除了上述封装，xDialog 提供了几个默认的头部、内容和底部实现类。用户可以直接使用，也可以参照他们实现自己想要的效果，
 
 此外，xDialog 还提供了其他的 API，比如自定义对话框显示的位置是头部、中间还是底部，自定义对话框是否可以撤销，自定义对话框的背景，监听对话框的的显示和隐藏事件等等。
+
+<div style="display:flex;" id="target">
+<img src="resources/Screenshot_2022-02-24-23-16-29-23_08de23611bf79886a74beffca0ad6bab.jpg" width="16%" />
+<img src="resources/Screenshot_2022-02-24-23-16-32-17_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="16%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-37-24_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="16%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-40-25_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="16%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-45-48_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="16%"/>
+<img src="resources/Screenshot_2022-02-24-23-16-56-55_08de23611bf79886a74beffca0ad6bab.jpg" style="margin-left:5px;" width="16%"/>
+</div>
 
 ## 其他
 
